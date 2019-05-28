@@ -22,6 +22,9 @@ setup(
     packages=find_packages(exclude=['doc', 'test']),
     include_package_data=True,
     install_requires=['numpy','pyomo>=5.3','scipy','pandas>=0.19.0','networkx>=1.10', 'cartopy>=0.16'],
+    extras_require = {
+        "docs": ["numpydoc", "sphinx", "sphinx_rtd_theme"]
+    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
