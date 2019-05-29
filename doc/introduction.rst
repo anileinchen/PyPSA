@@ -70,19 +70,23 @@ demonstrates interactive plots generated with the `plotly
 <https://plot.ly/python/>`_ library.
 
 
-.. image:: img/line-loading.png
-
-.. image:: img/lmp.png
+.. image:: img/lmp_and_line-loading.png
+    :align: center
 
 .. image:: img/reactive-power.png
+    :align: center
+    :width: 500px
 
-.. image:: img/stacked-gen.png
 
-.. image:: img/storage-scigrid.png
+.. image:: img/stacked-gen_and_storage-scigrid.png
+    :align: center
 
 .. image:: img/scigrid-curtailment.png
+    :align: left
 
-.. image:: img/meshed-ac-dc.png
+.. image:: img/ac_dc_meshed.png
+    :align: center
+    :width: 400px
 
 
 Optimised capacities of generation and storage for a 95% reduction in CO2 emissions in Europe compare to 1990 levels:
