@@ -59,40 +59,41 @@ What PyPSA does and does not do (yet)
 Screenshots
 ===========
 
-Results from a PyPSA simulation can be converted into an interactive
-online animation using `PyPSA-animation
-<https://github.com/PyPSA/PyPSA-animation>`_, see the `PyPSA-Eur-30
-example <https://www.pypsa.org/animations/pypsa-eur-30/>`_.
 
-Another showcase for PyPSA is the `SciGRID example
-<https://pypsa.org/examples/scigrid-lopf-then-pf-plotly.html>`_ which
-demonstrates interactive plots generated with the `plotly
-<https://plot.ly/python/>`_ library.
+* `Pypsa-EUR <https://github.com/PyPSA/pypsa-eur>`_ optimising capacities of generation, storage and transmission lines (9% line volume expansion allowed) for a 95% reduction in CO2 emissions in Europe compared to 1990 levels
 
-
-.. image:: img/lmp_and_line-loading.png
+.. image:: img/elec_s_256_lv1.09_Co2L-3H.png
     :align: center
+    :width: 700px
 
-.. image:: img/reactive-power.png
-    :align: center
-    :width: 500px
 
+*  `SciGRID model <https://power.scigrid.de/>`_ simulating the German power system for 2015. Interactive plots also be generated with the `plotly <https://plot.ly/python/>`_ library, as shown in this `Notebook <https://pypsa.org/examples/scigrid-lopf-then-pf-plotly.html>`_
 
 .. image:: img/stacked-gen_and_storage-scigrid.png
     :align: center
 
-.. image:: img/scigrid-curtailment.png
-    :align: left
+.. image:: img/lmp_and_line-loading.png
+    :align: right
+
+
+.. image:: img/reactive-power.png
+    :align: center
+    :width: 600px
+
+
+* Small meshed AC-DC toy model
 
 .. image:: img/ac_dc_meshed.png
     :align: center
     :width: 400px
 
+All results from a PyPSA simulation can be converted into an interactive
+online animation using `PyPSA-animation
+<https://github.com/PyPSA/PyPSA-animation>`_, for an example see the `PyPSA-Eur-30
+example <https://www.pypsa.org/animations/pypsa-eur-30/>`_. 
 
-Optimised capacities of generation and storage for a 95% reduction in CO2 emissions in Europe compare to 1990 levels:
 
-.. image:: img/euro-pie-pre-7-branch_limit-1-256.png
-.. image:: img/legend-flat.png
+
 
 
 What PyPSA uses under the hood

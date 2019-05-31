@@ -206,7 +206,7 @@ cols = ["Nuclear","Run of River","Brown Coal","Hard Coal",
         "Gas","Wind Offshore","Wind Onshore","Solar"]
 p_by_carrier = p_by_carrier[cols]
 
-fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(10,7),
+fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(10,6),
                               gridspec_kw={'height_ratios':[2,1]})
 
 
@@ -233,6 +233,7 @@ ax2.legend(reversed(handles), reversed(labels),
            labelspacing=2, frameon=False)
 ax2.grid(linestyle='dashed')
 ax2.set_ylabel("MWh")
+ax2.set_xlabel("")
 
 fig.tight_layout()
 fig.savefig("stacked-gen_and_storage-scigrid.png", bbox_inches='tight')
@@ -242,11 +243,10 @@ now = network.snapshots[4]
 print("With the linear load flow, there is the following per unit loading:")
 loading = network.lines_t.p0.loc[now]/network.lines.s_nom
 print(loading.describe())
-#%%
 #-----------------------------------------------------------------------------
 #line loading
 fig, (ax1, ax2) = plt.subplots(1,2, subplot_kw={"projection":ccrs.PlateCarree()},
-                                       figsize=(12,4))
+                                       figsize=(10,4))
 
 nplot = network.plot(ax=ax1,line_colors=abs(loading), bus_colors='grey',
                      bus_sizes=0.5, geomap='10m',
@@ -372,12 +372,12 @@ print((s*180/np.pi).describe())
 
 
 #-----------------------------------------------------------------------------
-#%%
+
 #plot the reactive power
 
 fig,ax = plt.subplots(1,1, subplot_kw={"projection":ccrs.PlateCarree()})
 
-fig.set_size_inches(6,6)
+fig.set_size_inches(8,6)
 
 q = network.buses_t.q.loc[now]
 
@@ -386,9 +386,10 @@ bus_colors[q< 0.] = "b"
 
 
 network.plot(bus_sizes=abs(q),ax=ax,bus_colors=bus_colors,
-             line_widths=0.1,
+             line_widths=0.1, geomap='10m', color_geomap=True,
              title="Reactive power feed-in (red=+ve, blue=-ve)")
 
+fig.canvas.draw()
 fig.tight_layout()
 fig.savefig("reactive-power.png")
 
