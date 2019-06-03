@@ -60,7 +60,7 @@ Screenshots
 ===========
 
 
-* `Pypsa-EUR <https://github.com/PyPSA/pypsa-eur>`_ optimising capacities of generation, storage and transmission lines (9% line volume expansion allowed) for a 95% reduction in CO2 emissions in Europe compared to 1990 levels
+* `PyPSA-Eur <https://github.com/PyPSA/pypsa-eur>`_ optimising capacities of generation, storage and transmission lines (9% line volume expansion allowed) for a 95% reduction in CO2 emissions in Europe compared to 1990 levels
 
 .. image:: img/elec_s_256_lv1.09_Co2L-3H.png
     :align: center
