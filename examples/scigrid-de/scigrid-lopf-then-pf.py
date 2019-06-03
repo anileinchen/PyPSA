@@ -80,6 +80,8 @@ import cartopy.crs as ccrs
 #you downloaded the github repository
 #https://github.com/PyPSA/PyPSA
 
+plt.rcParams['savefig.dpi'] = 250
+
 csv_folder_name = os.path.dirname(pypsa.__file__) + "/../examples/scigrid-de/scigrid-with-load-gen-trafos/"
 
 network = pypsa.Network(csv_folder_name=csv_folder_name)
